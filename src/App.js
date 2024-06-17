@@ -1,16 +1,19 @@
 import React from 'react';
-import Hero from './Hero';
+import Head from './Head';
 import RickAndMortyCharacters from './RickandMortyCharacters';
+import Foot from './Foot';
+import { ScrollProvider } from './ScrollContext';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-      </header>
-      <Hero />
-      <RickAndMortyCharacters />
-    </div>
+    <ScrollProvider>
+      <div className="App">
+        <Head />
+        <RickAndMortyCharacters />
+        <Foot />
+      </div>
+    </ScrollProvider>
   );
 }
 
