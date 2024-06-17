@@ -7,7 +7,7 @@ function Character({ id, name, image, status }) {
   }
   
   return (
-    <div className="character-card">
+    <div className="character-card p-5">
       <img src={image} alt={name} />
       <h2>{name}</h2>
       <p>ID: {id}</p>

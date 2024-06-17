@@ -28,7 +28,7 @@ function RickAndMortyCharacters() {
   return (
     <div>
       <h1>Rick and Morty Characters</h1>
-      <div className="character-list">
+      <div className="character-list flex flex-wrap justify-center">
         {characters.map(character => (
           <Character
             key={character.id}
