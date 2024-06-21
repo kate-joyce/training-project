@@ -1,6 +1,6 @@
 import React from 'react';
 import Head from './Head.tsx';
-import RickAndMortyCharacters from './RickandMortyCharacters';
+import RickAndMortyCharacters from './RickAndMortyCharacters.tsx';
 import Foot from './Foot.tsx';
 import { ScrollProvider } from './ScrollContext.tsx';
 import './App.css';

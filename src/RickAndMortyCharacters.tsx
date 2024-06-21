@@ -1,11 +1,20 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import Character from './Character';
+import Character from './Character.tsx';
 
-function RickAndMortyCharacters() {
-  const [characters, setCharacters] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+const RickAndMortyCharacters: React.FC = () => {
+  interface Character {
+    key: number;
+    id: number;
+    name: string;
+    image: string;
+    status: string;
+  }
+  
+  const [characters, setCharacters] = useState<Character[]>([]);
+  // const [characters, setCharacters] = useState([]);
+  const [loading, setLoading] = useState<boolean>(true);
+  const [error, setError] = useState<Error | null>(null);
  
   useEffect(() => {
     const fetchCharacters = async () => {

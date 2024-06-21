@@ -1,6 +1,14 @@
 import React from 'react';
 
-function Character({ id, name, image, status }) {
+interface CharacterProps {
+  key: number;
+  id: number;
+  name: string;
+  image: string;
+  status: string;
+}
+
+const Character: React.FC<CharacterProps> = ({ id, name, image, status }) => {
   
   function emojiHealth() {
     return status === 'Alive' ? '🟢' : status === 'Dead' ? '🔴' : '🚀'
