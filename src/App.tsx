@@ -1,11 +1,11 @@
 import React from 'react';
-import Head from './Head';
+import Head from './Head.tsx';
 import RickAndMortyCharacters from './RickandMortyCharacters';
-import Foot from './Foot';
-import { ScrollProvider } from './ScrollContext';
+import Foot from './Foot.tsx';
+import { ScrollProvider } from './ScrollContext.tsx';
 import './App.css';
 
-function App() {
+const App: React.FC = () => {
   return (
     <ScrollProvider>
       <div className="App">

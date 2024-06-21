@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
-import ScrollContext from './ScrollContext';
+import { useScroll } from './ScrollContext.tsx';
 
-function Foot() {
-  const topRef = useContext(ScrollContext);
+const Foot: React.FC = () => {
+  const { topRef } = useScroll();
 
   const scrollToTop = () => {
     if (topRef.current) {
@@ -15,6 +15,6 @@ function Foot() {
       <button onClick={scrollToTop}>Scroll to Top</button>
     </footer>
   );
-}
+};
 
 export default Foot;
