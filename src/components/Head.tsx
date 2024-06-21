@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useScroll } from './ScrollContext.tsx';
+import { useScroll } from './ScrollContext';
 
 const Head: React.FC = () => {
   const { topRef } = useScroll();

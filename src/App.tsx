@@ -1,8 +1,8 @@
 import React from 'react';
-import Head from './Head.tsx';
-import RickAndMortyCharacters from './RickAndMortyCharacters.tsx';
-import Foot from './Foot.tsx';
-import { ScrollProvider } from './ScrollContext.tsx';
+import Head from './components/Head';
+import RickAndMortyCharacters from './components/RickAndMortyCharacters';
+import Foot from './components/Foot';
+import { ScrollProvider } from './components/ScrollContext';
 import './App.css';
 
 const App: React.FC = () => {

@@ -1,5 +1,5 @@
-import React, { useContext } from 'react';
-import { useScroll } from './ScrollContext.tsx';
+import React from 'react';
+import { useScroll } from './ScrollContext';
 
 const Foot: React.FC = () => {
   const { topRef } = useScroll();

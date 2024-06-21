@@ -1,4 +1,4 @@
-import React, { createContext, useRef, RefObject } from 'react';
+import React, { createContext, useRef, RefObject, ReactNode } from 'react';
 
 // Define the type for the context
 interface ScrollContextProps {
@@ -9,7 +9,7 @@ interface ScrollContextProps {
 const ScrollContext = createContext<ScrollContextProps | undefined>(undefined);
 
 // Create a provider component
-export const ScrollProvider: React.FC = ({ children }) => {
+export const ScrollProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   // Create a ref to be shared
   const topRef = useRef<HTMLDivElement>(null);
 
@@ -22,7 +22,7 @@ export const ScrollProvider: React.FC = ({ children }) => {
 };
 
 // Custom hook for using the ScrollContext
-export const useScroll = () => {
+export const useScroll = (): ScrollContextProps => {
   const context = React.useContext(ScrollContext);
   if (!context) {
     throw new Error('useScroll must be used within a ScrollProvider');

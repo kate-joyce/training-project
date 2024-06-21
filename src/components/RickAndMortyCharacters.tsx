@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import Character from './Character.tsx';
+import Character from './Character';
 
 const RickAndMortyCharacters: React.FC = () => {
   interface Character {
@@ -23,7 +23,7 @@ const RickAndMortyCharacters: React.FC = () => {
         setCharacters(response.data.results);
         setLoading(false);
       } catch (error) {
-        setError(error);
+        setError(error as Error);
         setLoading(false);
       }
     };

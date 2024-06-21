@@ -1,6 +1,14 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "baseUrl": "./src",
+    "paths": {
+      "@components/*": ["./components/*"],
+      "@utils/*": ["./utils/*"]
+    },
+    "moduleResolution": "node",
+    "jsx": "react-jsx",
+    "target": "es6",
+    "module": "esnext",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
@@ -9,12 +17,9 @@
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": true,
-    "module": "esnext",
-    "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "react-jsx"
+    "noEmit": true
   },
   "include": ["src"]
 }
